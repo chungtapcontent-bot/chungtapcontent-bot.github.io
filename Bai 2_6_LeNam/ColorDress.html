@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ColorDress - Gallery with Large Lightbox</title>
+<style type="text/css">
+/* Cấu hình nền và font chữ chung */
+body {
+    background-color: #fcfcfc; 
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- THIẾT KẾ TIÊU ĐỀ CAO CẤP --- */
+.brand-header {
+    text-align: center;
+    margin-bottom: 60px; 
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
+    font-size: 36px;
+    font-weight: 300; 
+    letter-spacing: 6px; 
+    color: #111111;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.gallery-subtitle {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #888888; 
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+}
+
+.title-line {
+    width: 40px;
+    height: 1px;
+    background-color: #222222;
+    margin: 20px auto 0 auto;
+}
+
+/* Khung lưới chứa sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+/* Từng ô bọc sản phẩm */
+.product-item {
+    background-color: #ffffff;
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hiệu ứng khi rê chuột vào ô sản phẩm */
+.product-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); 
+}
+
+/* Định dạng cho ảnh */
+.product-item img {
+    width: 100%;
+    height: 380px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hiệu ứng zoom nhẹ ảnh khi hover */
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- TĂNG KÍCH THƯỚC PHẦN PHÓNG TO (LIGHTBOX) --- */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92); /* Tăng độ tối nền để làm nổi bật ảnh lớn tốt hơn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Đã nhân rộng tối đa vùng hiển thị của ảnh */
+.lightbox-img {
+    max-width: 95%;          /* Cho phép ảnh chiếm gần hết chiều rộng màn hình */
+    max-height: 95%;         /* Tăng không gian chiều cao lên mức tối đa */
+    width: auto;             /* Giữ nguyên tỉ lệ ảnh gốc */
+    height: auto;            /* Giữ nguyên tỉ lệ ảnh gốc */
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active .lightbox-img {
+    transform: scale(1);
+}
+
+/* Nút đóng (X) được đẩy ra xa mép một chút tránh đè lên ảnh rộng */
+.lightbox-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 200;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 10000; /* Luôn nổi trên ảnh */
+}
+.lightbox-close:hover {
+    color: #ff4a4a;
+    transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+    <div class="brand-header">
+        <h1 class="gallery-title">ColorDress</h1>
+        <span class="gallery-subtitle">Premium Collection</span>
+        <div class="title-line"></div>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress1.jpg" alt="ColorDress 1"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress2.jpg" alt="ColorDress 2"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress3.jpg" alt="ColorDress 3"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress4.jpg" alt="ColorDress 4"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress5.jpg" alt="ColorDress 5"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress6.jpg" alt="ColorDress 6"/>
+        </div>
+        <div class="product-item">
+            <img src="Bai 2.6 Le Nam/Images/Services/ColorDress/cDress7.jpg" alt="ColorDress 7"/>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Product" />
+    </div>
+
+    <script type="text/javascript">
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const productItems = document.querySelectorAll('.product-item img');
+
+        productItems.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src; 
+                lightbox.classList.add('active'); 
+                document.body.style.overflow = 'hidden'; 
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; 
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+</html>
