@@ -1,0 +1,110 @@
+a{
+font: verdana;
+font-size:11px;
+color:#FFFFFF;
+text-decoration:none;
+font-weight:bold;
+}
+
+a:hover {
+text-decoration:underline;
+color:#52031e;
+}
+
+body {
+margin: 0px;
+background-color:#52031e;
+}
+
+.bien {
+border-top:#FFFFFF solid 1px;
+border-bottom:#FFFFFF solid 1px;
+padding-left:10px;
+color: #FFFFFF;
+background-color:#F08200;
+padding: 3px;
+}
+
+.tieude {
+font-family:ARIAL;
+font-size:24px;
+color:#FFFFFF;
+font-weight:bold;
+}
+
+.footer {
+font-family: tahoma;
+font-size:x-small;
+color:#FFFFFF;
+}
+
+.nut {
+background-image:url(Images/nut_tim_kiem.gif);
+background-color:#922722;
+background-repeat:no-repeat;
+color:#FFFFFF;
+}
+
+.noidung{
+font-family: tahoma;
+font-size:small;
+color:#FFFFFF;
+padding-left:20px;
+}
+
+.nen{
+	background-image:url(Images/nen.gif);
+    background-repeat:repeat-y;	
+}
+
+/* Custom additions for layout and formatting */
+.tensanpham {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #F08200;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.img-border {
+    border: 1px solid #FFFFFF;
+}
+
+.form-label {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.input-box {
+    width: 130px;
+    height: 18px;
+    border: 1px solid #7F9DB9;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-left: 2px;
+}
+
+.product-item {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.product-desc {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 11px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    padding-left: 15px;
+}
+
+.menu-separator {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 5px;
+}
