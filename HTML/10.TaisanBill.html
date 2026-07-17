@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TaisanBill.htm</title>
+<style type="text/css">
+    /* 1. THU NHỎ VÀ CĂN GIỮA TRANG (Không cần container) */
+    body {
+        /* Thiết lập ảnh nền bất động */
+        background-image: url("..Images/bill.jpg"); 
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* Thiết lập độ rộng và căn giữa */
+        width: 550px;           /* Thu nhỏ chiều ngang nội dung còn 550px */
+        margin: 50px auto;      /* Căn giữa toàn bộ trang ra giữa màn hình */
+        background-color: white; /* Nền trắng cho nội dung để dễ đọc */
+        padding: 30px;          /* Khoảng cách từ chữ đến viền trắng */
+        border: 1px solid #000; /* Viền đen bao quanh */
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Đổ bóng cho đẹp */
+    }
+
+    /* 2. ĐỊNH DẠNG TIÊU ĐỀ */
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        color: #000;
+    }
+
+    /* 3. ĐỊNH DẠNG VĂN BẢN CANH ĐỀU */
+    p {
+        text-align: justify;    /* Canh đều 2 bên theo yêu cầu */
+        line-height: 1.6;       /* Khoảng cách dòng thoáng */
+        font-size: 16px;
+    }
+
+    /* 4. ĐỊNH DẠNG ẢNH BILL GATES */
+    .bill-img {
+        float: right;           /* Căn lề phải ảnh */
+        width: 130px;           /* Kích thước ngang ảnh là 130 */
+        margin-left: 15px;      /* Khoảng cách giữa chữ và ảnh */
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+    <h2>Máy tính "bó tay" với tài sản của Bill Gates</h2>
+    
+    <p>
+        <img src="Images/bill.jpg" alt=""  class="bill-img" title="Billgate thăm Việt Nam" />
+        
+        Bill Gates, người sáng lập Công ty phần mềm Microsoft và là người giàu nhất thế giới, cho biết cơ quan thuế của Mỹ phải lưu trữ các dữ liệu tài chính của ông vào một máy tính đặc biệt, bởi tài sản của ông quá nhiều. 
+        <br><br>
+        Phát biểu tại một hội nghị do Microsoft tổ chức ở Lisbon, thủ đô Bồ Đào Nha, Bill Gates nói rằng một máy tính thông thường không thể xử lý đúng các số liệu tài chính của ông . . . .
+    </p>
+
+</body>
+</html>
