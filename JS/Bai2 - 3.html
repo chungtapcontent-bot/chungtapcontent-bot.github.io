@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai2- 3</title>
+</head>
+<body>
+<center>
+    <table border="0">
+        <caption>
+            <h3>Bài 2. Làm quen với các phép toán</h3>
+        </caption>
+        <tbody>
+            <tr>
+                <td>Nhập số thứ 1</td>
+                <td><input type="text" id="txtsol"></td>
+            </tr>
+            <tr>
+                <td>Nhập số thứ 2</td>
+                <td><input type="text" id="txtso2"></td>
+            </tr>
+            <tr>
+                <td>Phép toán</td>
+                <td><input type="button" name="cong" id="cong" value="+">
+                <input type="button" name="tru" id="tru" value="-">
+                <input type="button" name="nhan" id="nhan" value="x">
+                <input type="button" name="chia" id="chia" value="/"></td>
+            </tr>
+            <tr>
+                <td>Kết quả:</td>
+                <td><p id="ketqua" style="font-weight: bold"></p></td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+
+<script>
+// Lấy phần tử HTML dùng để in kết quả
+var theKetQua = document.getElementById("ketqua");
+
+// 1. Xử lý khi bấm nút Cộng (+)
+document.getElementById("cong").onclick = function() {
+    // Lấy dữ liệu người dùng nhập và ép kiểu sang Số (Number)
+    var so1 = Number(document.getElementById("txtsol").value);
+    var so2 = Number(document.getElementById("txtso2").value);
+    
+    // Tính toán và in ra màn hình (vào trong thẻ <p id="ketqua">)
+    theKetQua.innerHTML = so1 + so2;
+};
+
+// 2. Xử lý khi bấm nút Trừ (-)
+document.getElementById("tru").onclick = function() {
+    var so1 = Number(document.getElementById("txtsol").value);
+    var so2 = Number(document.getElementById("txtso2").value);
+    
+    theKetQua.innerHTML = so1 - so2;
+};
+
+// 3. Xử lý khi bấm nút Nhân (x)
+document.getElementById("nhan").onclick = function() {
+    var so1 = Number(document.getElementById("txtsol").value);
+    var so2 = Number(document.getElementById("txtso2").value);
+    
+    theKetQua.innerHTML = so1 * so2;
+};
+
+// 4. Xử lý khi bấm nút Chia (/)
+document.getElementById("chia").onclick = function() {
+    var so1 = Number(document.getElementById("txtsol").value);
+    var so2 = Number(document.getElementById("txtso2").value);
+    
+    // Kiểm tra xem số chia có bằng 0 hay không
+    if (so2 === 0) {
+        theKetQua.innerHTML = "Lỗi: Không thể chia cho 0!";
+    } else {
+        theKetQua.innerHTML = so1 / so2;
+    }
+};
+</script>
+</body>
+</html>

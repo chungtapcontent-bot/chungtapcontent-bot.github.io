@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai6</title>
+</head>
+
+<body>
+<span id="ngay"></span> <span id="dong-ho">00:00:00</span>
+
+<script>
+    function hienThiNgay(){
+        var d=new Date();
+        var dd=d.getDate();
+        var mm=d.getMonth()+1;
+        var yyyy=d.getFullYear();
+        document.getElementById('ngay').innerHTML="Hôm nay, ngày "+dd+" tháng "+mm+" năm "+yyyy;
+    }
+    hienThiNgay();
+
+    function capNhatDongHo() {
+        const bayGio = new Date();
+        // Định dạng thời gian theo chuẩn Việt Nam (HH:mm:ss)
+        const chuoiThoiGian = bayGio.toLocaleTimeString('vi-VN');
+        // Ghi vào thẻ div
+        document.getElementById('dong-ho').innerText = chuoiThoiGian;
+    }
+    
+    // Chạy ngay lần đầu tiên để tránh bị trễ 1 giây
+    capNhatDongHo();
+
+    // Chạy lặp lại sau mỗi 1 giây
+    setInterval(capNhatDongHo, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai8</title>
+<style type="text/css">
+    body{
+        background: #CB1A1D;
+    }
+</style>
+</head>
+
+<body>
+<script>
+    function doiMauTheoGiay() {
+        // Lấy giá trị giây hiện tại (từ 0 đến 59)
+        var giay = new Date().getSeconds();
+
+        // Kiểm tra điều kiện chẵn lẻ bằng phép chia lấy dư
+        if (giay % 2 === 0) {
+            // Giây chẵn -> Đổi sang màu đỏ
+            document.body.style.backgroundColor = "#CB1A1D";
+        } else {
+            // Giây lẻ -> Đổi sang màu xanh (bạn có thể thay mã màu tùy thích)
+            document.body.style.backgroundColor = "#0056b3";
+        }
+    }
+
+    // Gọi hàm ngay lập tức khi vừa tải trang để set màu chính xác
+    doiMauTheoGiay();
+
+    // Thiết lập vòng lặp để tự động chạy lại hàm sau mỗi 1000 mili-giây (1 giây)
+    setInterval(doiMauTheoGiay, 1000);
+</script>
+</body>
+</html>

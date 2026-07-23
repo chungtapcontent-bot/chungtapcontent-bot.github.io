@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai5</title>
+<body>
+<div id="dong-ho" style="font-size: 2rem; font-weight: bold; font-family: monospace;">
+    00:00:00
+</div>
+
+
+<script>
+    function capNhatDongHo() {
+        const bayGio = new Date();
+
+        // Định dạng thời gian theo chuẩn Việt Nam (HH:mm:ss)
+        const chuoiThoiGian = bayGio.toLocaleTimeString('vi-VN');
+
+        // Ghi vào thẻ div
+        document.getElementById('dong-ho').innerText = chuoiThoiGian;
+    }
+
+    // Chạy ngay lần đầu tiên để tránh bị trễ 1 giây
+    capNhatDongHo();
+
+    // Chạy lặp lại sau mỗi 1 giây
+    setInterval(capNhatDongHo, 1000);
+</script>
+</body>
+</html>
