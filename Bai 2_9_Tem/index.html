@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chỉnh vị trí tem nghiêng chuẩn</title>
+<style type="text/css">
+/* Khung chứa chính để làm gốc tọa độ cho các thành phần tuyệt đối */
+.web-container {
+    position: relative;
+    width: 938px;
+    height: 625px;
+    margin: 0 auto;
+    overflow: hidden; /* THÊM: Giúp ẩn con tem khi trôi vượt quá mép trên và mép dưới */
+}
+
+.background-moc {
+    background-image: url(IMAGES/tem.jpg);
+    background-repeat: no-repeat;
+    width: 486px;
+    height: 625px;
+    vertical-align: bottom;
+}
+
+.soc_ngang {
+    background-image: url(IMAGES/socngang.gif);
+    background-repeat: repeat-x;
+    background-position: top;
+    height: 281px;
+}
+
+.mmau1 {
+    background-image: url(IMAGES/mmau1.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.right-panel {
+    width: 452px;
+    height: 625px;
+    background-color: #A7B5D8;
+    vertical-align: top;
+}
+
+/* Đặt gốc tọa độ cho tem vàng nằm dọc theo vạch ranh giới */
+.gold-stamp-position {
+    position: absolute;
+    left: 422px;  
+    top: 0px;     /* THAY ĐỔI: Đưa về 0px để con tem trôi trọn vẹn từ trên cùng xuống */
+    z-index: 100; 
+}
+
+/* THAY ĐỔI: Hiệu ứng trôi từ từ từ trên xuống dưới và lặp lại liên tục */
+.drop-animation {
+    /* 
+       - 8s: Thời gian trôi hết một lượt (tăng số giây lên nếu muốn trôi chậm hơn)
+       - linear: Chuyển động đều tăm tắp, không bị giật hay nảy
+       - infinite: Lặp lại vô hạn
+    */
+    animation: driftSlowly 8s linear infinite;
+}
+
+@keyframes driftSlowly {
+    0% {
+        transform: translateY(-110px); /* Bắt đầu ẩn hoàn toàn ở phía trên ngoài khung */
+    }
+    100% {
+        transform: translateY(630px);  /* Trôi dần đều xuống dưới và ẩn hẳn dưới đáy khung */
+    }
+}
+
+/* Tọa độ tem nghiêng */
+.fixed-stamp-position {
+	position: absolute;
+	left: 316px;  
+	top: 369px;   
+	z-index: 99;  
+}
+.web-container table tr .right-panel table tr td {
+	text-align: center;
+}
+.vien-cham-tron {
+    border-top: 5px dotted #000000;    /* Đường chấm tròn phía trên */
+    border-bottom: 5px dotted #000000; /* Đường chấm tròn phía dưới */
+    height: 15px;                      /* Khoảng cách giữa 2 đường viền */
+    width: 100%;                       /* Chiều rộng của đường viền */
+    box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+
+<div class="web-container">
+
+  <table width="938" border="0" cellpadding="0" cellspacing="0" style="height: 625px;">
+    <tr>
+      <td height="625" class="background-moc">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="soc_ngang">
+          <tr>
+            <td width="90%" height="224" valign="middle" align="right" style="padding-right: 15px;">
+              <table border="0" align="center" cellpadding="0" cellspacing="0" style="padding-top: 80px;">
+                <tr>
+                  <td>
+                    <img src="IMAGES/tem1a.jpg" width="70" height="90" />
+                    <img src="IMAGES/tem1b.jpg" width="70" height="90" />
+                    <img src="IMAGES/tem1d.jpg" width="70" height="90" />
+                    <img src="IMAGES/tem1e.jpg" width="70" height="90" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td width="10%" class="mmau1" valign="middle" style="padding-left: 10px;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="52" colspan="2" align="center" valign="middle">
+              <a href="#" style="text-decoration:none; color:blue; font-weight:bold;">TRANG CHỦ</a> | 
+              <a href="#" style="text-decoration:none; color:blue; font-weight:bold;">SƯU TẬP</a> | 
+              <a href="#" style="text-decoration:none; color:blue; font-weight:bold;">CLB</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+      
+      <td class="right-panel"><table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="89" align="center"><img src="IMAGES/lich_su.jpg" width="256" height="65" /></td>
+        </tr>
+        <tr>
+          <td height="179">Năm 1838, Ông Rowland Hill,<br /> giám đốc Bưu điện Anh quốc đã đệ trình<br />Quốc hội Anh để án phát hành tem <br />dán lên phong bì để giải quyết vấn đề thu<br /> cước phí. Đầu năm 1840, <br />đề án này được thông qua và ngày 6/5/1840,<br /> con tem đầu tiên in hình nữ hòang<br /> Victoria, gía “1 penny”ra đời.</td>
+        </tr>
+        <tr>
+          <td height="299" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="203"><img src="IMAGES/condau1.gif" width="191" height="196" /></td>
+            </tr>
+            <tr>
+              <td height="33"><p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="vien-cham-tron">NHÓM . MULTIMEDIA . SƯU . TẬP</td>
+                  </tr>
+                </table>
+                <p>&nbsp;</p></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+
+  <!-- Tem vàng chuyển động trôi từ từ và lặp lại -->
+  <div class="gold-stamp-position">
+    <img class="drop-animation" src="IMAGES/ngay2.gif" width="127" height="106" alt="Tem vàng" />
+  </div>
+
+  <div class="fixed-stamp-position">
+    <img src="IMAGES/tem1f.gif" width="114" height="114" alt="Tem nghiêng" />
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+.khung-vien {
+    border-left-style: dashed; /* Kiểu: gạch nét */
+    border-left-width: thin;   /* Kích cỡ: thin */
+    border-left-color: #009966; /* Màu: #009966 */
+}
+
+/* 2. Tạo lớp tiêu đề */
+.tieu-de {
+    font-family: Tahoma, sans-serif; /* Font: tahoma */
+    color: #000000;                  /* màu: đen (#000000) */
+    font-size: 24px;                 /* Kích cỡ: 24px */
+    font-weight: bold;               /* in đậm */
+}
+
+/* 3. Tạo lớp nội dung */
+.noi-dung {
+    font-family: Tahoma, sans-serif; /* Font: tahoma */
+    color: #000000;                  /* màu: đen (#000000) */
+    font-size: 11px;                 /* Kích cỡ: 11px */
+}
+
+/* 4. Tạo lớp ghi chú */
+.ghi-chu {
+    font-family: Arial, sans-serif;  /* Font: arial */
+    color: #FF0000;                  /* màu: đỏ (#FF0000) */
+    font-size: 11px;
+}
+</style>
+</head>
+
+<body>
+<table width="1026" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" align="right"><img src="images/canh_hoa.gif" width="288" height="44" /></td>
+    <td width="226">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="images/cong.gif" width="512" height="86" /><img src="images/Logo.gif" width="288" height="86" /></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="190" valign="top"><img src="images/cong01.gif" width="190" height="20" /><img src="images/trangchu.gif" width="190" height="47" /><br /><img src="images/tintuc.gif" width="190" height="41" /><br /><img src="images/Hopthu.gif" width="190" height="39" /><br /><img src="images/gocthugian.gif" width="190" height="39" /><br /><img src="images/Hoacaycanh.gif" width="190" height="35" /><img src="images/hopthu_rose.gif" width="190" height="249" /></td>
+    <td width="610" valign="top" class="khung-vien"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="76" align="center" class="tieu-de">ĐĂNG KÝ MUA HOA</td>
+      </tr>
+      <tr>
+        <td height="28" class="noi-dung" style="padding-left: 10px;">Qúy độc giả hãy điền đầy đủ thông tin theo yêu cầu để nhận được sản phẩm hoa, cây cảnh ưa thích nhất.</td>
+      </tr>
+      <tr>
+        <td><form action="#" method="post">
+    <table border="0" cellpadding="0" cellspacing="0" style="font-family: Tahoma, sans-serif; font-size: 11px; color: #000000;">
+        <!-- Họ và tên -->
+        <tr>
+            <td style="text-align: right; width: 100px; padding: 4px;">Họ và tên :</td>
+            <td style="padding: 4px;">
+                <input type="text" name="txtHoTen" style="width: 350px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                <span style="margin-left: 5px;">(*)</span>
+            </td>
+        </tr>
+        
+        <!-- Địa chỉ -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Địa chỉ :</td>
+            <td style="padding: 4px;">
+                <input type="text" name="txtDiaChi" style="width: 470px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                <span style="margin-left: 5px;">(*)</span>
+            </td>
+        </tr>
+        
+        <!-- Điện thoại -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Điện thoại :</td>
+            <td style="padding: 4px;">
+                <input type="text" name="txtDienThoai" style="width: 200px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                <span style="margin-left: 5px;">(*)</span>
+            </td>
+        </tr>
+        
+        <!-- Email -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Email :</td>
+            <td style="padding: 4px;">
+                <input type="text" name="txtEmail" style="width: 280px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                <span style="margin-left: 5px;">(*)</span>
+            </td>
+        </tr>
+        
+        <!-- Loại hoa & Màu -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Loại hoa :</td>
+            <td style="padding: 4px;">
+                <select name="selLoaiHoa" style="width: 140px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                    <option value="thuocduoc">Thược Dược</option>
+                    <option value="hong">Hoa Hồng</option>
+                    <option value="cuc">Hoa Cúc</option>
+                </select>
+                <span style="margin-left: 5px; margin-right: 5px;">Màu</span>
+                <select name="selMau" style="width: 80px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                    <option value="do">Đỏ</option>
+                    <option value="vang">Vàng</option>
+                    <option value="trang">Trắng</option>
+                </select>
+            </td>
+        </tr>
+        
+        <!-- Số lượng -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Số lượng :</td>
+            <td style="padding: 4px;">
+                <input type="text" name="txtSoLuong" style="width: 120px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9;">
+                <span style="margin-left: 5px;">(*)</span>
+            </td>
+        </tr>
+        
+        <!-- Đơn vị tính -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Đơn vị tính :</td>
+            <td style="padding: 4px;">
+                <label><input type="radio" name="radDVT" value="nhanh"> Nhánh</label>
+                <label style="margin-left: 10px;"><input type="radio" name="radDVT" value="bo"> Bó</label>
+                <label style="margin-left: 10px;"><input type="radio" name="radDVT" value="chau"> Chậu</label>
+            </td>
+        </tr>
+        
+        <!-- Thanh toán -->
+        <tr>
+            <td style="text-align: right; padding: 4px;">Thanh toán :</td>
+            <td style="padding: 4px;">
+                <label><input type="radio" name="radPTTT" value="tienmat"> Tiền mặt</label>
+                <label style="margin-left: 10px;"><input type="radio" name="radPTTT" value="chuyenkhoan"> Chuyển khoản</label>
+                <label style="margin-left: 10px;"><input type="radio" name="radPTTT" value="mastercard"> Master card</label>
+            </td>
+        </tr>
+        
+        <!-- Yêu cầu -->
+        <tr>
+            <td style="text-align: right; padding: 4px; vertical-align: top; padding-top: 6px;">Yêu cầu :</td>
+            <td style="padding: 4px;">
+                <textarea name="txtYeuCau" rows="5" style="width: 440px; font-family: Tahoma; font-size: 11px; border: 1px solid #a9a9a9; resize: none;"></textarea>
+            </td>
+        </tr>
+        
+        <!-- Nút bấm -->
+        <tr>
+            <td></td>
+            <td style="padding: 14px 4px 4px 4px;">
+                <input type="submit" value="Đăng ký" style="width: 120px; height: 26px; font-family: Tahoma; font-size: 11px;">
+                <input type="reset" value="Xóa thông tin" style="width: 180px; height: 26px; margin-left: 10px; font-family: Tahoma; font-size: 11px;">
+            </td>
+        </tr>
+    </table>
+</form></td>
+      </tr>
+    </table>
+      <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p></td>
+    <td><img src="images/hoa.gif" width="212" height="398" /></td>
+  </tr>
+</table>
+</body>
+</html>
